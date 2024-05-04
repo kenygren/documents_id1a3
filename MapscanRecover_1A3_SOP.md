@@ -33,10 +33,14 @@ Do NOT use the SPEC SCAN No. - this is circled in red and is not the number you 
 
 ![spec_scan_id](./figures/annotated_mapscan_spec.png)
 
-Once you have found the scan number, you can update the experiments .mac file (located in the raw folder of the data collection directory) in the following way: 
+In the input.txt file (typically named "OutputForSpec_*.txt) it corresponds to this number:
+
+![inputtxt](./figures/outputforspec_example.png)
+
+Once you have found the scan number, you can update the experiment *.mac  file (typically named with a date convention e.g. 2024-05-01.mac, located in the raw folder of the data collection directory) in the following way: 
 
 ~~~
-mbmapscan inputtextarray.txt <starting row number here>
+mbmapscan input.txt <starting row number here>
 ~~~
 
 `qdo` the .mac file and run the mapscans. 
@@ -56,8 +60,7 @@ Many times simply aborting the scans, and starting from the last scan in the seq
 
 If you know or suspect that SPEC is in a confused state or behaving poorly after an abort sequence, you may want to try the following: 
 
-1. check the motors are where you expect them to be
+1. check the motors are where you expect them to be. For pseudo motors - this can be done by moving to a known ome and checking the galil non-macromotors have the same reading as before. For instance, move to a known ome from a time before the abort sequence, print the sampXp, sampYp, sampX, and sampY and make sure they show the expected values. 
 2. `config` and `ctrl+c` to recompile the motor macros
-3. `udo` userlist.mac
 
 If these do not work - start methodically troubleshooting to understand what is not communicating properly. Note: there are "cleanup" routines in many of the deeper macros that you can run as individual functions. 
