@@ -25,6 +25,8 @@ Fri May 03 12:44:42 2024.  CHESS not enbabled. Stand by...
 
 Mapscans can be aborted by the user at anytime (`ctrl+c`) and resumed from any row (aka scan, aka line) of the input array. The interger number of the row. 
 
+Note: only `ctrl+c` ONCE and wait for the SPEC prompt. If you `ctrl+c` more than once, cleanup macros may not have a time to gracefully end the sequence. If you suspect you have had an ungraceful abort - please see section below. 
+
 Record the integer scan identifier corresponds to the row in the input array of the scan that was aborted (NOT SCAN NUMBER ASSOCIATED WITH THE DATA FOLDER - these are two different numbers that have similar nomenclature). 
 
 To find this for the scan that is aborted, look for the green circled numbers in the sequence. You can also see the last SUCCESSFUL scan in the "Scan# Finished" line. The scan that was aborted will be the next one in the sequence. 
