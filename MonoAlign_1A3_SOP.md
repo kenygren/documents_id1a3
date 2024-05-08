@@ -195,7 +195,7 @@ check ome
 - `umvr` *sampY 25*
 - `mbdscan` sampX -0.5 0.5 50 0.2 ; record sampX center x1
 - *SPEC> p deg(atan((x1-x2)/25))*; record as delta_ome
-- `umvr` *ome* delta_ome #didnt check which sign - if wrong do inverse
+- `umvr` *ome* delta_ome
 
 repeat the procedure above until you are confident in the rome value, then `set` *ome 0* and record in beamtime notes.  
 
@@ -205,7 +205,7 @@ repeat the procedure above until you are confident in the rome value, then `set`
     - `umv` *ome 0*
     - `mbdscan` *sampXp -0.5 0.5 50 0.2* ; sampXp postion = x1
     - `umv`sampXp x1
-    - `umv` *ome 180*
+    - `umv` *ome 90*
     - `mbdscan` *sampXp -0.5 0.5 50 0.2* ; sampXp postion = x2
     - `umv`sampXp x2
     - `umv` *ome 0* #back to starting position
