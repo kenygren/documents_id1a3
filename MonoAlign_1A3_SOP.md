@@ -50,8 +50,15 @@ Note: The profiles should look like fairly nice flat tophats, if they do not eit
     2. Fit *step function* in PyMCA using ion chamber ratio  *a3ic2/a3ic1*; NOTE: if you do not see a step make sure the foil is actually inserting. The foil box is a pile of garbage. 
     3. `moveE` to value found in Energy value of the step function
     4. `setE` to **target Energy** value
-    
-    - repeat 1-4. Once the fit value is appropriately close to the energy value (within a few eV), type `Escan_save` to have the scan set as the master for our data reduction workflow purposes. Make sure you have confirmed that you are actually at the **target energy** position before proceeding. 
+
+- Do the following procedure to ensure the profile of the beam is optimized when the mostab is on:  
+    - in the SPEC terminal, turn on the mostab auto feature: `mos_control` and type `auto`
+    - record the voltage on the mostab at 90%
+    - in the SPEC terminal, turn on the mostab auto feature: `mos_control` and type `off`
+    - turn the mostab to the voltage you recorded
+    - repeat the **alignt pre-slits** procedure 
+
+- repeat 1-4. Once the fit value is appropriately close to the energy value (within a few eV), type `Escan_save` to have the scan set as the master for our data reduction workflow purposes. Make sure you have confirmed that you are actually at the **target energy** position before proceeding. 
 
 #### align fast shutter
 
